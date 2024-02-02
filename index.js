@@ -21,12 +21,12 @@ const questions = [{
   },
   {
     type: 'input',
-    message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the devlopment environment running.',
+    message: 'What are the steps required to install your project?',
     name: 'install',
   },
   {
     type: 'input',
-    message: 'Provide instructions and examples for use. Include screenshots as needed.',
+    message: 'Provide instructions and examples for use.',
     name: 'usage',
   },
   {
@@ -71,14 +71,13 @@ const questions = [{
 
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+//prompt
+inquirer
+  .prompt(questions)
+// Generate a readme file basewd on user's input with user's github as name and resolve
 
-// function to initialize program
-function init() {
+.then((data) => {
+    console.log(data);
+    
+})
 
-}
-
-// function call to initialize program
-init();
