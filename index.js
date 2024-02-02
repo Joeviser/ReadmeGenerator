@@ -74,10 +74,11 @@ const questions = [{
 //prompt
 inquirer
   .prompt(questions)
-// Generate a readme file basewd on user's input with user's github as name and resolve
 
+// Generate a readme file based on user's input with user's github as name
 .then((data) => {
-    console.log(data);
-    
+   // console.log(data);
+    fs.writeFile(`${data.github}.md`, generateMarkdown(data), (err) =>
+        err ? console.error(err) : console.log("Your Professional Readme was generated"))
 })
 
