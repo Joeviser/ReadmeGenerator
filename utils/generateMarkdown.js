@@ -1,3 +1,13 @@
+// GET license badge if user choose any licence option 
+
+function getBadge(license) {
+  if (license !== "None") {
+    return `![Badge](https://img.shields.io/badge/License-${license}-blue.svg)`
+  }
+  return ``;
+}
+
+
 
 // function to generate markdown for README
 function generateMarkdown(data) {
@@ -7,6 +17,7 @@ function generateMarkdown(data) {
 
   ${data.name}
 
+  ${getBadge(data.license)}
   
 
   ## Description 
@@ -28,7 +39,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## Licence
-  Application covered by the ${data.license} license
+  Application covered by ${data.license} license
 
   ## Credits 
   ${data.credits}
@@ -44,6 +55,7 @@ function generateMarkdown(data) {
   
   ## Deployed Application 
   This application was deplopyed at [${data.deploy}](${data.deploy})
+
 
 `;
 }
