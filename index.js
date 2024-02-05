@@ -43,16 +43,18 @@ const questions = [{
         { value: 'None' }, 
     ]
   },
+
+  {
+    type: 'input',
+    message: 'List your collaborates',
+    name: 'credits',
+},
   {
     type: 'input',
     message: 'How would you test this project?',
     name: 'test',
   },       
-  {
-      type: 'input',
-      message: 'List your collaborates',
-      name: 'credits',
-  },
+  
   {
       type: 'input',
       message: 'Enter your GitHub username:',
@@ -77,7 +79,7 @@ inquirer
 
 // Generate a readme file based on user's input with user's github as name
 .then((data) => {
-   // console.log(data);
+  
     fs.writeFile(`${data.github}.md`, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log("Your Professional Readme was generated"))
 })
