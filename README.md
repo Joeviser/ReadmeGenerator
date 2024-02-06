@@ -10,6 +10,10 @@ The application will be invoked by using the following command: Node index.js
 
 ## Installation
 
+GitHub repository link:
+https://github.com/Joeviser/ReadmeGenerator.git
+
+
 Video:
 https://drive.google.com/file/d/1WTp36O3insrcXUJgcFZ05SDaiXEoldQ-/view?pli=1
 
