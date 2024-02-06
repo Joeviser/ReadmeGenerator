@@ -80,7 +80,7 @@ inquirer
 // Generate a readme file based on user's input with user's github as name
 .then((data) => {
   
-    fs.writeFile(`${data.github}.md`, generateMarkdown(data), (err) =>
+    fs.writeFile(`${data.title}.md`, generateMarkdown(data), (err) =>
         err ? console.error(err) : console.log("Your Professional Readme was generated"))
 })
 
